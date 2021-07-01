@@ -1,4 +1,4 @@
-from autoencoder import Autoencoder
+from autoencoder import VAE
 from tensorflow.keras.datasets import mnist
 
 LEARNING_RATE = 0.0005
@@ -19,7 +19,7 @@ def load_mnist():
 
 
 def train(x_train, learning_rate, batch_size, epochs):
-    autoencoder = Autoencoder(
+    autoencoder = VAE(
         input_shape=(28, 28, 1),
         conv_filters=[32, 64, 64, 64],
         conv_kernels=[3, 3, 3, 3],
@@ -34,7 +34,8 @@ def train(x_train, learning_rate, batch_size, epochs):
 
 if __name__ == "__main__":
     x_train, _, _, _ = load_mnist()
-    autoencoder = train(x_train[:500], LEARNING_RATE, BATCH_SIZE, EPOCHS)
+    # Using 10000 to speed up the process but mnist has 60000 samples per digit
+    autoencoder = train(x_train[:10000], LEARNING_RATE, BATCH_SIZE, EPOCHS)
     autoencoder.save("model")
-    autoencoder2 = Autoencoder.load("model")
+    autoencoder2 = VAE.load("model")
     autoencoder2.summary()
