@@ -27,7 +27,7 @@ class VAE:
         self.conv_kernels = conv_kernels # Each list element is the size of the kernel for a layer
         self.conv_stride = conv_stride # Each list elements is the stride for a given layer
         self.latent_space_dim = latent_space_dim # int.
-        self.reconstruction_loss_weight = 1000
+        self.reconstruction_loss_weight = 1000000
 
         # more attributes
         self.encoder = None
