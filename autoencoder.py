@@ -57,7 +57,7 @@ class VAE:
 
     def train(self, x_train, batch_size, num_epochs):
         self.model.fit(x_train,
-                       x_train,
+                       x_train, # expected output is similar to input for autoencoders.
                        batch_size=batch_size,
                        epochs=num_epochs,
                        shuffle=True
