@@ -6,7 +6,7 @@ LEARNING_RATE = 0.0005
 BATCH_SIZE = 64
 EPOCHS = 150
 
-SPECTROGRAMS_PATH = "/Users/msf/Datasets/FSDD_Dataset/spectrograms/"
+SPECTROGRAMS_PATH = "Dataset/spectrograms/"
 
 
 def load_fsdd(spectrograms_path):
