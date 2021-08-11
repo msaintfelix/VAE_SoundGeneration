@@ -8,9 +8,9 @@ from autoencoder import VAE
 from train import SPECTROGRAMS_PATH
 
 HOP_LENGTH = 256
-SAVE_DIR_ORIGINAL = "/Users/msf/Datasets/FSDD_Dataset/samples/originals"
-SAVE_DIR_GENERATED = "/Users/msf/Datasets/FSDD_Dataset/samples/generated"
-MIN_MAX_VALUES_PATH = "/Users/msf/Datasets/FSDD_Dataset/min_max_values.pkl"
+SAVE_DIR_ORIGINAL = "Dataset/samples/originals"
+SAVE_DIR_GENERATED = "Dataset/samples/generated"
+MIN_MAX_VALUES_PATH = "Dataset/min_max_values.pkl"
 
 
 def load_fsdd(spectrograms_path):
